@@ -2,7 +2,7 @@ variables:
   ml-ws-connection: 'MLOps-PHE' # Workspace Service Connection name
   ml-ws: 'aml-development' # AML Workspace name
   ml-rg: 'RESEARCH-DEVELOPMENT' # AML resource Group name
-  ml-ct: 'adi-compute' # AML Compute cluster name
+  ml-ct: 'com-cluster' # AML Compute cluster name
   ml-path: 'models/diabetes' # Model directory path in repo
   ml-exp: 'exp-test' # Experiment name
   ml-model-name: 'diabetes-model' # Model name
@@ -12,7 +12,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'Ubuntu-20.04'
 
 steps:
 - task: AzureCLI@2
